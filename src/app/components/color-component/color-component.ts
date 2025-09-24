@@ -11,7 +11,7 @@ import { ColorService } from '../../services/color-service';
 })
 export class ColorComponent implements OnInit {
 
-  colorService: Color = inject(ColorService);
+  colorService: ColorService = inject(ColorService);
 
   colors: Color[] = [];
 
