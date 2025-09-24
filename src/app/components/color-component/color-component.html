@@ -1,6 +1,5 @@
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
     @for (c of colors; track $index) {
-    <app-color-block-component></app-color-block-component>
+    <app-color-block-component [color]="c"></app-color-block-component>
     }
-
 </div>

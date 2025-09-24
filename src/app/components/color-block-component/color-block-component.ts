@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Color } from '../../models/color';
 
 @Component({
   selector: 'app-color-block-component',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './color-block-component.css'
 })
 export class ColorBlockComponent {
-
+  @Input()
+  color!: Color;
 }

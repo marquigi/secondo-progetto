@@ -1,2 +1,10 @@
-<div class="col">Colore 1
+<h2>{{ color.name }}</h2>
+<div class="color-block" [style.backgroundColor]="color.hex">
+    <span>{{ color.hex }}</span>
+
+    @if (color.active) {
+    <h5>Attivo</h5>
+    } @else {
+    <h5>Inattivo</h5>
+    }
 </div>
