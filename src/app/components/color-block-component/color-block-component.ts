@@ -10,4 +10,8 @@ import { Color } from '../../models/color';
 export class ColorBlockComponent {
   @Input()
   color!: Color;
+
+  interrutore() {
+    this.color.active = !this.color.active;
+  }
 }
