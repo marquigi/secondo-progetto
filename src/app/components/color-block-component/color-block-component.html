@@ -1,6 +1,7 @@
 <h2>{{ color.name }}</h2>
-<div class="color-block" [style.backgroundColor]="color.hex">
+<div class="color-block active" [style.backgroundColor]="color.hex">
     <span>{{ color.hex }}</span>
+    <hr>
 
     @if (color.active) {
     <h5>Attivo</h5>
