@@ -18,4 +18,11 @@ export class ColorComponent implements OnInit {
   ngOnInit(): void {
     this.colors = this.colorService.getColors();
   }
+
+  datoRicevuto(color: Color) {
+    console.log("colori");
+    this.colors = this.colors.map(c =>
+      c.name === color.name ? color : c
+    );
+  }
 }

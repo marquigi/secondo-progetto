@@ -1,4 +1,6 @@
-<div class="color-block" [style.backgroundColor]="color.active ? color.hex : '#000000'" (click)="interrutore()">
+<div class="color-block" [style.backgroundColor]="color.active ? color.hex : '#000000'" (click)="interrutoreA()"
+    [ngClass]="{ 'active-block': color.active }">
+
     <h2>{{ color.name }}</h2>
     <span>{{ color.hex }}</span>
     @if (color.active) {

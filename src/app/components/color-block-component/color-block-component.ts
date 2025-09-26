@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, output } from '@angular/core';
 import { Color } from '../../models/color';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-color-block-component',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './color-block-component.html',
   styleUrl: './color-block-component.css'
 })
@@ -11,7 +12,10 @@ export class ColorBlockComponent {
   @Input()
   color!: Color;
 
-  interrutore() {
+  interrutoreB = output<Color>();
+
+  interrutoreA() {
+    this.interrutoreB.emit(this.color!);
     this.color.active = !this.color.active;
   }
 }
